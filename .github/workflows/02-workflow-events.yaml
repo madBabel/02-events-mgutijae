@@ -6,6 +6,6 @@ on:
 jobs:
   echo:
     runs-on: ubuntu-latest
-    steps:
-      - name: ShowTrigger
-        run: echo "Workflow triggered by: ${{ github.event_name }}"
+      steps:
+        - name: ShowTrigger
+          run: echo "Workflow triggered by: ${{ github.event_name }}"
