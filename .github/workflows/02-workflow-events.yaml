@@ -2,6 +2,10 @@ name: 02 - Eventos
 
 on: 
   push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'  # Ejecuta cada día a medianoche (modifica según tus necesidades)
+  workflow_dispatch:
 
 jobs:
   echo:
