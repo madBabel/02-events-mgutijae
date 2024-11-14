@@ -1,10 +1,16 @@
 name: 02 - Eventos
-on:    
-  push: 
+ 
+on:
+push:
+pull_request:
+schedule:
+  - cron: '0 0 * * *' #todos los días a las 12:00 ;)
+workflow_dispatch:
+ 
 jobs:
   echo:
     runs-on: ubuntu-latest
-    steps:          
+    steps:
       - name: ShowTrigger
-        run: |
-          echo "Workflow triggered by: ${{ github.event_name }}"
+        run:  |
+         echo "Event name: ${{ github.event_name }}"
